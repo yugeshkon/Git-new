@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+		checkout scm
+	    }
+	}
+	stage('Build') {
+	    steps {
+                  sh '/root/softwar/apache-maven-3.6.3/bin/mvn install'
+	         }
+	               }     
+                
+
+           } 
+
+
+        }
+
